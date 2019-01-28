@@ -1,5 +1,6 @@
 const siteContent = {
   "nav": {
+    
     "nav-item-1": "Services",
     "nav-item-2": "Product",
     "nav-item-3": "Vision",
@@ -38,5 +39,36 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
+let navItems = document.querySelectorAll("nav a");
+navItems.forEach((link, i) => {
+  link.innerHTML = siteContent.nav[`nav-item-${i + 1}`];
+});
+
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+logo.setAttribute("src", siteContent["nav"]["img-src"])
+
+let ctaText = document.getElementsByClassName("cta-text")[0];
+ctaText.getElementsByTagName("h1")[0].innerHTML = siteContent["cta"]["h1"];
+ctaText.getElementsByTagName("button")[0].innerHTML = siteContent["cta"]["button"];
+
+let ctaImg = document.getElementById("cta-img");
+ctaImg.setAttribute("src", siteContent["cta"]["img-src"]);
+
+
+
+
+let midImg = document.getElementByClassName("middle-img");
+midImg.setAttribute("src", siteContent["main-content"]["img-src"]);
+
+let topText = document.getElementsByClassName("text-content")[0];
+topText.getElementsByTagName("text-content")[0].innerHTML = siteContent["main-content"]["h4"];
+topText.getElementsByTagName("text-content")[0].innerHTML = siteContent["main-content"]["p"];
+
+let bottomText = document.getElementsByClassName("bottom-content")[0];
+bottomText.getElementsByTagName("text-content")[0].innerHTML = siteContent["main-content"]["h4"];
+bottomText.getElementsByTagName("text-content")[0].innerHTML = siteContent["main-content"]["p"];
+
+let contactInfo = document.getElementsByClassName("contact")[0];
+contactInfo.getElementsByTagName("h4")[0].innerHTML = siteContent["contact"];
+contactInfo.getElementsByTagName("p")[0].innerHTML = siteContent["contact"];
+
