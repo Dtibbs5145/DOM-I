@@ -57,18 +57,18 @@ ctaImg.setAttribute("src", siteContent["cta"]["img-src"]);
 
 
 
-let midImg = document.getElementByClassName("middle-img");
-midImg.setAttribute("src", siteContent["main-content"]["img-src"]);
+let midImg = document.querySelector(".middle-img");
+midImg.setAttribute("src", siteContent["main-content"]["middle-img-src"]);
 
 let topText = document.getElementsByClassName("text-content")[0];
-topText.getElementsByTagName("text-content")[0].innerHTML = siteContent["main-content"]["h4"];
-topText.getElementsByTagName("text-content")[0].innerHTML = siteContent["main-content"]["p"];
+topText.getElementsByTagName("h4")[0].innerHTML = siteContent["main-content"]["h4"];
+topText.getElementsByTagName("p")[0].innerHTML = siteContent["main-content"]["p"];
 
 let bottomText = document.getElementsByClassName("bottom-content")[0];
-bottomText.getElementsByTagName("text-content")[0].innerHTML = siteContent["main-content"]["h4"];
-bottomText.getElementsByTagName("text-content")[0].innerHTML = siteContent["main-content"]["p"];
+bottomText.getElementsByTagName("h4")[0].innerHTML = siteContent["main-content"]["h4"];
+bottomText.getElementsByTagName("p")[0].innerHTML = siteContent["main-content"]["p"];
 
 let contactInfo = document.getElementsByClassName("contact")[0];
-contactInfo.getElementsByTagName("h4")[0].innerHTML = siteContent["contact"];
-contactInfo.getElementsByTagName("p")[0].innerHTML = siteContent["contact"];
+contactInfo.getElementsByTagName("h4")[0].innerHTML = siteContent["contact"]["h4"];
+contactInfo.getElementsByTagName("p")[0].innerHTML = siteContent["contact"]["p"];
 
